@@ -1,0 +1,3 @@
+title=DNA
+author=MonroCoury
+orientation=landscape

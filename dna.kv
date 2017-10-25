@@ -1,0 +1,112 @@
+#:import Factory kivy.factory.Factory
+
+<MyPopup@Popup>:
+	id: help
+	title: 'Info'
+	size_hint: (None, None)
+	size: (1280, 880)
+	pos_hint: {'top' : 0.94}
+	GridLayout:
+		rows: 2
+		Label:
+			text: "Simple DNA transcription/translation calculator,\nenter the nucleotides separated by a space, uncheck\nthe template box if you're working on the coding\nstrand, and press transcript or translate to get the\ncorresponding mRNA/protein.\n\nLearning project by Monro Coury"
+	
+		Button:
+			size_hint_y: None
+	        size_hint_x: None
+	        size: (200, 100)
+			text: "Dismiss"
+			on_press: root.dismiss()
+
+CustomLayout:
+
+<CustomLayout>:
+	rows: 4
+	spacing: 0.2
+	padding: 0.2
+	
+	GridLayout:
+		cols: 4
+		size_hint_y: 0.33
+		pos_hint: {'top' : 0.9}
+		TextInput:
+			id: given_DNA
+			size_hint: (0.50, 0.3)
+			pos_hint: {'top': 0.99}
+			text: "AAG GGA"
+		
+		Button:
+			pos_hint: {'top': 0.93}
+			size_hint: (0.1, 0.2)
+			text: "clear"
+			on_press: root.clear_given_DNA()
+
+		CheckBox:
+			id: template
+			size_hint: (0.02, 0.04)
+			pos_hint: {'top' : 0.9}
+			
+		Label:
+			text: "Template"
+			size_hint_x: 0.09
+			size_hint_y: 0.08
+			pos_hint: {'top': 0.9}
+
+	
+	GridLayout:
+		size_hint_y: 0.33
+		pos_hint: {'top' : 0.9}
+		cols: 4
+		TextInput:
+			id: mRNA
+			text: "Corresponding mRNA"
+			size_hint: (0.5, 0.3)
+			pos_hint: {'top': 0.99}
+		
+		Button:
+			text: "clear"
+			pos_hint: {'top': 0.93}
+			size_hint: (0.1, 0.2)
+			on_press: root.clear_mRNA()
+			
+		Spinner:
+			id: code_table
+			size_hint: (0.1, 0.15)
+			text: "Standard"
+			pos_hint: {'top': 0.91}
+			values: ("Standard", "Vertebrae", "Echinoderm", "Invertebrae", "Yeast", "Protozoan")
+			
+		Button:
+			text: "Transcript"
+			pos_hint: {'top': 0.93}
+			size_hint: (0.1, 0.2)
+			on_press: root.transcript()
+			
+	GridLayout:
+		size_hint_y: 0.33
+		pos_hint: {'top' : 0.9}
+		cols: 3
+		TextInput:
+			id: res_amino
+			text: "Resulting Amino Acid chain..."
+			size_hint: (0.50, 0.3)
+			pos_hint: {'top': 0.99}
+			
+		Button:
+			text: "clear"
+			pos_hint: {'top': 0.93}
+			size_hint: (0.1, 0.2)
+			on_press: root.clear_res()
+			
+		Button:
+			text: "Translate"
+			size_hint: (0.18, 0.4)
+			pos_hint: {'top': 0.93}
+			on_press: root.translate()
+	
+	
+	Button:
+		size_hint_y: None
+		height: self.parent.height * 0.1
+		text: "Help"
+		on_press: Factory.MyPopup().open()
