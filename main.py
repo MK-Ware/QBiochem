@@ -28,7 +28,7 @@ class CustomLayout(GridLayout):
         self.ids.res_amino.text = dna_samp.translate(self.ids.mRNA.text)
 
 class DNAApp(App):
-    title = 'DNA'
+    title = 'QBiochem'
     icon = 'icon.png'
 
 if __name__ in ('__main__', '__android__'):
