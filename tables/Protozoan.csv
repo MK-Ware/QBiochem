@@ -1,0 +1,22 @@
+Amino acid,SLC,Abbv,Codons
+Isoleucine,I,Ile,ATT ATC ATA
+Leucine,L,Leu,CTT CTC CTA CTG TTA TTG
+Valine,V,Val,GTT GTC GTA GTG
+Phenylalanine,F,Phe,TTT TTC
+Methionine,M,Met,ATG
+Cysteine,C,Cys,TGT TGC
+Alanine,A,Ala,GCT GCC GCA GCG
+Glycine,G,Gly,GGT GGC GGA GGG
+Proline,P,Pro,CCT CCC CCA CCG
+Threonine,T,Thr,ACT ACC ACA ACG
+Serine,S,Ser,TCT TCC TCA TCG AGT AGC
+Tyrosine,Y,Tyr,TAT TAC
+Tryptophan,W,Trp,TGG TGA
+Glutamine,Q,Gln,CAA CAG
+Asparagine,N,Asn,AAT AAC
+Histidine,H,His,CAT CAC
+Glutamic acid,E,Glu,GAA GAG
+Aspartic acid,D,Asp,GAT GAC
+Lysine,K,Lys,AAA AAG
+Arginine,R,Arg,CGT CGC CGA CGG AGA AGG
+Stop,Stop,Stop,TAA TAG
